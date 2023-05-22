@@ -1,0 +1,9 @@
+.searchSection {
+    border: 1px solid red;
+}
+.currentSection {
+    border: 1px solid blue;
+}
+.forecastSection {
+    border: 1px solid green;
+}
