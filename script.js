@@ -47,7 +47,14 @@ function searchForcast(city) {
     .then((data) => {
         console.log(data)
         for(let i = 0; i < forecastCard.length; i++) {
-            forecastCard.innerHTML = ""
+            forecastCard[i].innerHTML = "";
+            const dayIndex = i * 8 + 4
+            const icon = document.createElement("img");
+            icon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[dayIndex].weather[0].icon +"@2x.png")
+            forecastCard[i].append(icon)
+           const temp = document.createElement("h4")
+           temp.innerHTML = "Temp: " + Math.floor(data.list[dayIndex].main.temp) + " &#176F"
+           forecastCard[i].append(temp)
         }
     })
 }
