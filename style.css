@@ -1,3 +1,11 @@
+.header {
+    padding: 1px;
+    text-align: center;
+    background: #410ecd;
+    color: white;
+    font-size: 15px;
+  }
+
 .searchSection {
     border: 1px solid red;
 }
